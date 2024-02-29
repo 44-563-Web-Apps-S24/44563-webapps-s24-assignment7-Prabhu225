@@ -20,6 +20,7 @@
   <p id="Score">Score is zero</p>
   <p style= "font-family: cursive; color: aqua;"><button onclick="help()">Click for help</button></p>
   <p id="help" style="color: red; font-family: Arial, Helvetica, sans-serif;">Help report</p>
+  <p style= "font-family: cursive";><button class="btn btn-primary" onclick="newGame()">new game</button></p>
  
 
   <div class="row">
@@ -228,6 +229,16 @@
     
                 document.getElementById("help").innerText = helpText;
             }
+            function newGame() {
+            monsterLocation = Math.floor(Math.random() * 35);
+            fancyCoinLocations = Math.floor(Math.random() * 35);
+            console.log(monsterLocation);
+            console.log(fancyCoinLocations);
+            score=null;
+            locations=null;
+            document.getElementById("locations").innerText =`locations: 0`;
+            document.getElementById("score").innerText = `score: 0`;
+        }
         </script>
 
 </body>
